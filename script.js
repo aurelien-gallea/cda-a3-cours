@@ -1,0 +1,2 @@
+const afficherMessage = () => alert('hello');
+
