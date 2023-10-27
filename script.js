@@ -30,3 +30,27 @@ const switchLink = () => {
     lien.setAttribute("href", "http://franceinfo.fr")
     lien.textContent = "consulter l'actualité"
 }
+
+var premierP = document.querySelector('p')
+
+// console.log(premierP.classList);
+// console.log(premierP.className);
+var classes = premierP.classList
+// classes.remove("rouge")
+classes.add("bleu")
+classes.toggle("bleu")
+console.log(classes.contains('rouge'));
+
+const switchColor = () => {
+    const paras = document.querySelectorAll('p')
+    for (const para of paras) {
+        // para.classList.toggle("bleu")
+        // para.classList.toggle("rouge")
+        if (para.classList.contains("rouge")) {
+            para.classList.replace("rouge", "bleu")
+        } else {
+            para.classList.replace("bleu", "rouge")
+
+        }
+    }
+}
